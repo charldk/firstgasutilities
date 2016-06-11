@@ -1,0 +1,81 @@
+{
+  "locked": false,
+  "version": 2,
+  "targets": {
+    ".NETFramework,Version=v4.6": {
+      "Newtonsoft.Json/9.0.1-beta1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Newtonsoft.Json.Schema/2.0.3-beta1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1-beta1"
+        },
+        "compile": {
+          "lib/net45/Newtonsoft.Json.Schema.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.Schema.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Newtonsoft.Json/9.0.1-beta1": {
+      "sha512": "eGdISZNV16lWnDPHjfgBVcoyihASk/zsoXLN3r2uZYnXisiTUWKF8Xmgza3EtEFOMbYTmjUqBEjjT7Lx7ilK/w==",
+      "type": "package",
+      "files": [
+        "Newtonsoft.Json.9.0.1-beta1.nupkg.sha512",
+        "Newtonsoft.Json.nuspec",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "tools/install.ps1"
+      ]
+    },
+    "Newtonsoft.Json.Schema/2.0.3-beta1": {
+      "sha512": "KrvQg7mAT7zmPHD70qyhz1pz24S6LxYAJXPBImSzNQEFWrVCUZkTNtAGtAS4C+Kp0hBnio9ST1K+zawW+wwAVw==",
+      "type": "package",
+      "files": [
+        "Newtonsoft.Json.Schema.2.0.3-beta1.nupkg.sha512",
+        "Newtonsoft.Json.Schema.nuspec",
+        "lib/net35/Newtonsoft.Json.Schema.dll",
+        "lib/net35/Newtonsoft.Json.Schema.xml",
+        "lib/net40/Newtonsoft.Json.Schema.dll",
+        "lib/net40/Newtonsoft.Json.Schema.xml",
+        "lib/net45/Newtonsoft.Json.Schema.dll",
+        "lib/net45/Newtonsoft.Json.Schema.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.Schema.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.Schema.xml",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.Schema.dll",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.Schema.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [],
+    ".NETFramework,Version=v4.6": [
+      "Newtonsoft.Json >= 9.0.1-beta1",
+      "Newtonsoft.Json.Schema >= 2.0.3-beta1"
+    ]
+  },
+  "tools": {},
+  "projectFileToolGroups": {}
+}
