@@ -1,3 +1,4 @@
+#r "Newtonsoft.Json"
 #load "JsonValidatorResult.csx"
 
 using System.Net;
