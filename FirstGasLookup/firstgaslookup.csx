@@ -173,7 +173,7 @@ using Newtonsoft.Json;
 [
   {
     'Code': 'Network Distribution',
-    'Value': 100000000
+    'Value': 100000003
   },
   {
     'Code': 'LPG Network',
@@ -181,7 +181,7 @@ using Newtonsoft.Json;
   },
   {
     'Code': 'Transmission',
-    'Value': 100000002
+    'Value': 100000004
   },
   {
     'Code': 'Non FG Asset',
