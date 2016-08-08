@@ -1,0 +1,97 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "v1",
+		"title": "MyAzureFunctionsAPI"
+	},
+	"host": "function-utilities.azurewebsites.net",
+	"schemes": ["https"],
+	"paths": {
+		"/api/GenerateRoster": {
+			"get": {
+				"tags": ["MyAzureFunctions"],
+				"operationId": "MyAzureFunctions_GenerateRoster",
+				"consumes": ["application/json"],
+				"produces": ["application/json",
+				"text/json",
+				"application/xml",
+				"text/xml"],
+				"parameters": [{
+					"in": "body",
+					"schema": {
+						"$ref": "#/definitions/generaterosterreq"
+					}
+				}],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/generaterosterresponse"
+						}
+					}
+				},
+				"deprecated": false
+			}
+		}
+	},
+	"definitions": {
+		"generaterosterreq": {
+			"type": "object",
+			"properties": {
+				"consultant": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							}
+						},
+						"required": ["name"]
+					}
+				},
+				"initialdate": {
+					"type": "string"
+				}
+			},
+			"required": ["consultant",
+			"initialdate"]
+		},
+		"generaterosterresponse": {
+			"type": "object",
+			"properties": {
+				"rosterlist": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"rosterentry": {
+								"type": "object",
+								"properties": {
+									"consultant": {
+										"type": "string"
+									},
+									"datestart": {
+										"type": "string"
+									},
+									"datesend": {
+										"type": "string"
+									},
+									"contactinfo": {
+										"type": "string"
+									}
+								},
+								"required": ["consultant",
+								"datestart",
+								"datesend",
+								"contactinfo"]
+							}
+						},
+						"required": ["rosterentry"]
+					}
+				}
+			},
+			"required": ["rosterlist"]
+		}
+	}
+}
