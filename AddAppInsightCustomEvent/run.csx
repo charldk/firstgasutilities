@@ -16,6 +16,6 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
     tc.Context.InstrumentationKey = logentry.Key;
     log.Info($"Instrumentation key {tc.Context.InstrumentationKey}.");
     tc.TrackEvent(logentry.Event.ToString());
-
+    
     return  req.CreateResponse(HttpStatusCode.OK);
 }

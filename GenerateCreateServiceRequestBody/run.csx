@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using System.Xml;
+using System.Security;
 
 const string SOAP_REQUEST =
 @"<soapenv:Envelope xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/'><soapenv:Header/><soapenv:Body>{0}</soapenv:Body></soapenv:Envelope>";
@@ -17,18 +18,20 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
     string jsonContent = await req.Content.ReadAsStringAsync();
     dynamic data = JsonConvert.DeserializeObject(jsonContent);
     
-    DateTime datecreated = Convert.ToDateTime(data.createddate);
+    DateTime datecreated = Convert.ToDateTime(data.sropeneddate);
+    string addressdetails = String.Format(@"{0} - {1} - {2}",data.siteaddress, data.siteaddresssuburb,data.siteaddresscity);
+    addressdetails = (String.IsNullOrEmpty((string)data.siteaddressnotes)? addressdetails : String.Format(@"{0} | {1}",addressdetails, data.siteaddressnotes));
     
     string soapbody = string.Format(SOAP_BODY,
     datecreated.ToString("O"),
-    data.casenumber,
-    data.serviceregion,
-    data.service,
-    data.servicetype,
-    data.servicesubtype,
+    data.crmcasenumber,
+    String.IsNullOrEmpty(data.serviceregion)?"Waikato Gas Distribution":data.serviceregion,
+    (((string)data.srrequesttype).Contains("Fault")?"REACTIVE":"PROACTIVE"),
+    data.srrequesttype,
+    data.srsubrequesttype,
     datecreated.ToString("dd/MM/yyyy"),
-    data.address,
-    data.description);
+    addressdetails,
+    SecurityElement.Escape((string)data.srcustomersextendeddescription));
     string soaprequest = string.Format(SOAP_REQUEST,soapbody);
 
     var response = req.CreateResponse(HttpStatusCode.OK, soaprequest);

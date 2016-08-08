@@ -11,7 +11,7 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
     
     string jsonContent = await req.Content.ReadAsStringAsync();
     dynamic data = JsonConvert.DeserializeObject(jsonContent);
-
+    /*
     Lookup lookupdata = LookupFactory.Create();
     
     var activitypriority = lookupdata.ActivityPriority.FirstOrDefault(item => item.Code == (string)data.activitypriority);
@@ -25,6 +25,8 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
     var serviceregion = lookupdata.ServiceRegion.FirstOrDefault(item => item.Code == (string)data.serviceregion);
     var servicerequestsubtype = lookupdata.ServiceRequestSubType.FirstOrDefault(item => item.Code == (string)data.srsubtype);
     var servicerequesttype = lookupdata.ServiceRequestType.FirstOrDefault(item => item.Code == (string)data.srtype);
+    var asfoundleakcheckmethod = lookupdata.LeakCheckMethod.FirstOrDefault(item => item.Code == (string)data.asfoundleakcheckmethod);
+    var asleftleakcheckmethod = lookupdata.LeakCheckMethod.FirstOrDefault(item => item.Code == (string)data.asleftleakcheckmethod);
     
     data.activitypriority = (activitypriority == null)? null : activitypriority.Value;
     data.gasassetmaterial = (gasassetmaterial == null)? null : gasassetmaterial.Value;
@@ -37,7 +39,20 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
     data.serviceregion = (serviceregion == null)? null : serviceregion.Value;
     data.srsubtype = (servicerequestsubtype == null)? null : servicerequestsubtype.Value;
     data.srtype = (servicerequesttype == null)? null : servicerequesttype.Value;
+    data.asfoundleakcheckmethod = (asfoundleakcheckmethod == null)? null : asfoundleakcheckmethod.Value;
+    data.asleftleakcheckmethod = (asleftleakcheckmethod == null)? null : asleftleakcheckmethod.Value;
+    */
     
+    object result = null;
     
-    return req.CreateResponse<object>(HttpStatusCode.OK, (object)data);
+    if ((string)data.lookupmethod == "reverse")
+    {
+        result = LookupFactory.ReverseLookup(jsonContent);
+    }
+    else
+    {
+        result = LookupFactory.Lookup(jsonContent);
+    }
+    
+    return req.CreateResponse<object>(HttpStatusCode.OK, (object)result);
 }

@@ -17,6 +17,8 @@ using Newtonsoft.Json;
         public List<NameValuePair> ServiceRegion { get; set; }
         public List<NameValuePair> ServiceRequestSubType { get; set; }
         public List<NameValuePair> ServiceRequestType { get; set; }
+        public List<NameValuePair> LeakCheckMethod { get; set; }
+        public List<NameValuePair> NetworkSupplyLossType { get; set; }
 
 
 
@@ -25,6 +27,81 @@ using Newtonsoft.Json;
 
     public static class LookupFactory
     {
+        public static object Lookup(string input)
+        {
+            dynamic data = JsonConvert.DeserializeObject(input);
+            Lookup lookupdata = LookupFactory.Create();
+    
+            var activitypriority = lookupdata.ActivityPriority.FirstOrDefault(item => item.Code == (string)data.activitypriority);
+            var gasassetmaterial = lookupdata.GasAssetMaterial.FirstOrDefault(item => item.Code == (string)data.gasassetmaterial);
+            var gasassetsubtype = lookupdata.GasAssetSubType.FirstOrDefault(item => item.Code == (string)data.gasassetsubtype);
+            var gasassettype = lookupdata.GasAssetType.FirstOrDefault(item => item.Code == (string)data.gasassettype);
+            var gasfailuremode = lookupdata.GasFailureMode.FirstOrDefault(item => item.Code == (string)data.gasfailuremode);
+            var gasfaultdetection = lookupdata.GasFaultDetection.FirstOrDefault(item => item.Code == (string)data.gasfaultdetection);
+            var gassystempressure = lookupdata.GasSystemPressure.FirstOrDefault(item => item.Code == (string)data.gassystempressure);
+            var isfault = lookupdata.IsFault.FirstOrDefault(item => item.Code == (string)data.isfault);
+            var serviceregion = lookupdata.ServiceRegion.FirstOrDefault(item => item.Code == (string)data.serviceregion);
+            var servicerequestsubtype = lookupdata.ServiceRequestSubType.FirstOrDefault(item => item.Code == (string)data.srsubtype);
+            var servicerequesttype = lookupdata.ServiceRequestType.FirstOrDefault(item => item.Code == (string)data.srtype);
+            var asfoundleakcheckmethod = lookupdata.LeakCheckMethod.FirstOrDefault(item => item.Code == (string)data.asfoundleakcheckmethod);
+            var asleftleakcheckmethod = lookupdata.LeakCheckMethod.FirstOrDefault(item => item.Code == (string)data.asleftleakcheckmethod);
+            var networksupplylosstype = lookupdata.NetworkSupplyLossType.FirstOrDefault(item => item.Code == (string)data.networksupplylosstype);
+            
+            data.activitypriority = (activitypriority == null)? null : activitypriority.Value;
+            data.gasassetmaterial = (gasassetmaterial == null)? null : gasassetmaterial.Value;
+            data.gasassetsubtype = (gasassetsubtype == null)? null : gasassetsubtype.Value;
+            data.gasassettype = (gasassettype == null)? null : gasassettype.Value;
+            data.gasfailuremode = (gasfailuremode == null)? null : gasfailuremode.Value;
+            data.gasfaultdetection = (gasfaultdetection == null)? null : gasfaultdetection.Value;
+            data.gassystempressure = (gassystempressure == null)? null : gassystempressure.Value;
+            data.isfault = (isfault == null)? null : isfault.Value;
+            data.serviceregion = (serviceregion == null)? null : serviceregion.Value;
+            data.srsubtype = (servicerequestsubtype == null)? null : servicerequestsubtype.Value;
+            data.srtype = (servicerequesttype == null)? null : servicerequesttype.Value;
+            data.asfoundleakcheckmethod = (asfoundleakcheckmethod == null)? null : asfoundleakcheckmethod.Value;
+            data.asleftleakcheckmethod = (asleftleakcheckmethod == null)? null : asleftleakcheckmethod.Value;
+            data.networksupplylosstype = (networksupplylosstype == null)? null : networksupplylosstype.Value;
+            
+            return (object)data;
+        }
+        
+        public static object ReverseLookup (string input)
+        {
+            dynamic data = JsonConvert.DeserializeObject(input);
+            Lookup lookupdata = LookupFactory.Create();
+    
+            var activitypriority = lookupdata.ActivityPriority.FirstOrDefault(item => item.Value == (string)data.activitypriority);
+            var gasassetmaterial = lookupdata.GasAssetMaterial.FirstOrDefault(item => item.Value == (string)data.gasassetmaterial);
+            var gasassetsubtype = lookupdata.GasAssetSubType.FirstOrDefault(item => item.Value == (string)data.gasassetsubtype);
+            var gasassettype = lookupdata.GasAssetType.FirstOrDefault(item => item.Value == (string)data.gasassettype);
+            var gasfailuremode = lookupdata.GasFailureMode.FirstOrDefault(item => item.Value == (string)data.gasfailuremode);
+            var gasfaultdetection = lookupdata.GasFaultDetection.FirstOrDefault(item => item.Value == (string)data.gasfaultdetection);
+            var gassystempressure = lookupdata.GasSystemPressure.FirstOrDefault(item => item.Value == (string)data.gassystempressure);
+            var isfault = lookupdata.IsFault.FirstOrDefault(item => item.Value == (string)data.isfault);
+            var serviceregion = lookupdata.ServiceRegion.FirstOrDefault(item => item.Value == (string)data.serviceregion);
+            var servicerequestsubtype = lookupdata.ServiceRequestSubType.FirstOrDefault(item => item.Value == (string)data.srsubtype);
+            var servicerequesttype = lookupdata.ServiceRequestType.FirstOrDefault(item => item.Value == (string)data.srtype);
+            var asfoundleakcheckmethod = lookupdata.LeakCheckMethod.FirstOrDefault(item => item.Value == (string)data.asfoundleakcheckmethod);
+            var asleftleakcheckmethod = lookupdata.LeakCheckMethod.FirstOrDefault(item => item.Value == (string)data.asleftleakcheckmethod);
+            var networksupplylosstype = lookupdata.NetworkSupplyLossType.FirstOrDefault(item => item.Value == (string)data.networksupplylosstype);
+            
+            data.activitypriority = (activitypriority == null)? null : activitypriority.Code;
+            data.gasassetmaterial = (gasassetmaterial == null)? null : gasassetmaterial.Code;
+            data.gasassetsubtype = (gasassetsubtype == null)? null : gasassetsubtype.Code;
+            data.gasassettype = (gasassettype == null)? null : gasassettype.Code;
+            data.gasfailuremode = (gasfailuremode == null)? null : gasfailuremode.Code;
+            data.gasfaultdetection = (gasfaultdetection == null)? null : gasfaultdetection.Code;
+            data.gassystempressure = (gassystempressure == null)? null : gassystempressure.Code;
+            data.isfault = (isfault == null)? null : isfault.Code;
+            data.serviceregion = (serviceregion == null)? null : serviceregion.Code;
+            data.srsubtype = (servicerequestsubtype == null)? null : servicerequestsubtype.Code;
+            data.srtype = (servicerequesttype == null)? null : servicerequesttype.Code;
+            data.asfoundleakcheckmethod = (asfoundleakcheckmethod == null)? null : asfoundleakcheckmethod.Code;
+            data.asleftleakcheckmethod = (asleftleakcheckmethod == null)? null : asleftleakcheckmethod.Code;
+            data.networksupplylosstype = (networksupplylosstype == null)? null : networksupplylosstype.Code;
+            
+            return (object)data;
+        }
         static Lookup lookupdata;
         public static Lookup Create()
         {
@@ -173,7 +250,7 @@ using Newtonsoft.Json;
 [
   {
     'Code': 'Network Distribution',
-    'Value': 100000003
+    'Value': 100000002
   },
   {
     'Code': 'LPG Network',
@@ -199,7 +276,7 @@ using Newtonsoft.Json;
     'Value': 100000001
   },
   {
-    'Code': 'Equipement Failure',
+    'Code': 'Equipment Failure',
     'Value': 100000002
   },
   {
@@ -207,7 +284,7 @@ using Newtonsoft.Json;
     'Value': 100000003
   },
   {
-    'Code': 'TPD - First Gas Contractor',
+    'Code': 'TPD - FG Contractor',
     'Value': 100000004
   },
   {
@@ -226,30 +303,34 @@ using Newtonsoft.Json;
 'GasFaultDetection':
 [
   {
-    '100000000': 100000001,
-    'Customer/General Public': 'Emergency Services'
+    'Code': 'Customer/General Public',
+    'Value': 100000000
   },
   {
-    '100000000': 100000002,
-    'Customer/General Public': 'Leakage Survey'
+    'Code': 'Emergency Services',
+    'Value': 100000001
   },
   {
-    '100000000': 100000003,
-    'Customer/General Public': 'Onsite (FG Contractor)'
+    'Code': 'Leakage Survey',
+    'Value': 100000002
   },
   {
-    '100000000': 100000004,
-    'Customer/General Public': 'Retailer'
+    'Code': 'Onsite (FG Contractor)',
+    'Value': 100000003
   },
   {
-    '100000000': 100000005,
-    'Customer/General Public': 'Third Party Contractor'
+    'Code': 'Retailer',
+    'Value': 100000004
+  },
+  {
+    'Code': 'Third Party Contractor',
+    'Value': 100000005
   }
 ],
 'GasSystemPressure':
 [
   {
-    'Code': 'LPG- Up to 7kPa',
+    'Code': 'LP - Up to 7kPa',
     'Value': 100000000
   },
   {
@@ -261,15 +342,15 @@ using Newtonsoft.Json;
     'Value': 100000002
   },
   {
-    'Code': 'MP3 - 210kPa up to 420kPa',
+    'Code': 'MP4 - 210kPa up to 420kPa',
     'Value': 100000003
   },
   {
-    'Code': 'MP4 - 420kPa up to 700kPa',
+    'Code': 'MP7 - 420kPa up to 700kPa',
     'Value': 100000004
   },
   {
-    'Code': 'IP10 - 700kPa up to 1000kPa',
+    'Code': 'IP10 - 700Pa up to 1000kPa',
     'Value': 100000005
   },
   {
@@ -277,7 +358,7 @@ using Newtonsoft.Json;
     'Value': 100000006
   },
   {
-    'Code': 'HP - over 2000kPa',
+    'Code': 'HP - Over 2000kPa',
     'Value': 100000007
   },
   {
@@ -507,39 +588,39 @@ using Newtonsoft.Json;
   },
   {
     'Code': 'Faults - Poor Gas Pressure',
-    'Value': 100000023
-  },
-  {
-    'Code': 'Faults - Smell of Gas - Inside',
-    'Value': 100000024
-  },
-  {
-    'Code': 'Faults - Smell of Gas - Outside',
     'Value': 100000025
   },
   {
-    'Code': 'Faults - Damaged Asset - Gas Leak',
+    'Code': 'Faults - Smell of Gas - Inside',
     'Value': 100000026
   },
   {
-    'Code': 'Faults - Damaged Asset - No Gas Leak',
-    'Value': 100000027
-  },
-  {
-    'Code': 'Faults - Faulty Meter',
-    'Value': 100000028
-  },
-  {
-    'Code': 'Faults - Emergency Isolate',
+    'Code': 'Faults - Smell of Gas - Outside',
     'Value': 100000029
   },
   {
-    'Code': 'Faults - Check for Safety',
+    'Code': 'Faults - Damaged Asset - Gas Leak',
     'Value': 100000030
   },
   {
-    'Code': 'Faults - Relight',
+    'Code': 'Faults - Damaged Asset - No Gas Leak',
     'Value': 100000031
+  },
+  {
+    'Code': 'Faults - Faulty Meter',
+    'Value': 100000032
+  },
+  {
+    'Code': 'Faults - Emergency Isolate',
+    'Value': 100000027
+  },
+  {
+    'Code': 'Faults - Check for Safety',
+    'Value': 100000023
+  },
+  {
+    'Code': 'Faults - Relight',
+    'Value': 100000024
   }
 ],
 'ServiceRequestType':
@@ -567,6 +648,40 @@ using Newtonsoft.Json;
   {
     'Code': 'Faults - Gas',
     'Value': 100000005
+  }
+],
+'LeakCheckMethod':
+[
+  {
+    'Code': 'CGI',
+    'Value': 100000000
+  },
+  {
+    'Code': 'FIM',
+    'Value': 100000001
+  },
+  {
+    'Code': 'Soap',
+    'Value': 100000002
+  }
+],
+'NetworkSupplyLossType':
+[
+  {
+    'Code': 'Unplanned',
+    'Value': 100000002
+  },
+  {
+    'Code': 'Temporary Disconnection',
+    'Value': 100000003
+  },
+  {
+    'Code': 'Permanent Isolation',
+    'Value': 100000000
+  },
+  {
+    'Code': 'Planned',
+    'Value': 100000001
   }
 ]
 }";
