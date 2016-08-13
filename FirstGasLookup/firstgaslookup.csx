@@ -157,6 +157,10 @@ using Newtonsoft.Json;
   {
     'Code': 'Other',
     'Value': 100000004
+  },
+  {
+    'Code': 'Steel',
+    'Value': 100000005
   }
 ],
 'GasAssetSubType':
@@ -315,7 +319,7 @@ using Newtonsoft.Json;
     'Value': 100000002
   },
   {
-    'Code': 'Onsite (FG Contractor)',
+    'Code': 'On Site (FG Contractor)',
     'Value': 100000003
   },
   {
@@ -350,7 +354,7 @@ using Newtonsoft.Json;
     'Value': 100000004
   },
   {
-    'Code': 'IP10 - 700Pa up to 1000kPa',
+    'Code': 'IP10 - 700kPa up to 1000kPa',
     'Value': 100000005
   },
   {
@@ -583,44 +587,48 @@ using Newtonsoft.Json;
     'Value': 100000021
   },
   {
-    'Code': 'Faults - No Gas',
+    'Code': 'No Gas',
     'Value': 100000022
   },
   {
-    'Code': 'Faults - Poor Gas Pressure',
+    'Code': 'Poor Gas Pressure',
     'Value': 100000025
   },
   {
-    'Code': 'Faults - Smell of Gas - Inside',
+    'Code': 'Smell of Gas - Inside',
     'Value': 100000026
   },
   {
-    'Code': 'Faults - Smell of Gas - Outside',
+    'Code': 'Smell of Gas - Outside',
     'Value': 100000029
   },
   {
-    'Code': 'Faults - Damaged Asset - Gas Leak',
+    'Code': 'Damaged Asset - Gas Leak',
     'Value': 100000030
   },
   {
-    'Code': 'Faults - Damaged Asset - No Gas Leak',
+    'Code': 'Damaged Asset - No Gas Leak',
     'Value': 100000031
   },
   {
-    'Code': 'Faults - Faulty Meter',
+    'Code': 'Faulty Meter',
     'Value': 100000032
   },
   {
-    'Code': 'Faults - Emergency Isolate',
+    'Code': 'Emergency Isolate',
     'Value': 100000027
   },
   {
-    'Code': 'Faults - Check for Safety',
+    'Code': 'Check for Safety',
     'Value': 100000023
   },
   {
-    'Code': 'Faults - Relight',
+    'Code': 'Relight',
     'Value': 100000024
+  },
+  {
+      'Code': 'Urgent',
+      'Value': '100000028'
   }
 ],
 'ServiceRequestType':
@@ -648,6 +656,10 @@ using Newtonsoft.Json;
   {
     'Code': 'Faults - Gas',
     'Value': 100000005
+  },
+  {
+      'Code': 'Pipe Location',
+      'Value': 100000006
   }
 ],
 'LeakCheckMethod':
@@ -682,7 +694,7 @@ using Newtonsoft.Json;
   {
     'Code': 'Planned',
     'Value': 100000001
-  }
+  },
 ]
 }";
         #endregion

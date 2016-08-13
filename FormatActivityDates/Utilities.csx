@@ -16,7 +16,7 @@ public static class Utilities
         }
         else
         {
-            return inputdatetime.ToString("yyyy-MM-ddTHH:mm:ss");
+            return inputdatetime.ToString("yyyy-MM-ddTHH:mm:ssZ");
         }
     }
 }

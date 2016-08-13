@@ -21,6 +21,7 @@ public String buildingevacuated { get; set; }
 public String emergencyservicesinvolved { get; set; }
 public String otherhazards { get; set; }
 public String casenumber { get; set; }
+public String parentcasenumber { get; set; }
 public String accountname { get; set; }
 public String srowner { get; set; }
 public String customerreferenceid { get; set; }

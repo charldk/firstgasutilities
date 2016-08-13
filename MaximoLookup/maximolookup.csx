@@ -285,7 +285,7 @@ using Newtonsoft.Json;
     'ElectrixStatusCode': 'Duplicate',
     'MaximoStatusCode': 'NONE',
     'CRMStatusCode': 'Duplicate',
-    'CRMStatusValue': 100000000
+    'CRMStatusValue': 100000041
   },
   {
     'ElectrixStatusCode': 'Assigned',

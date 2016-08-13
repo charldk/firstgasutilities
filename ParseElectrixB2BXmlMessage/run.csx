@@ -46,6 +46,7 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
     result.otherhazards = data.B2BElectrixRequestType.Location.OtherHazards;
 
     result.casenumber = data.B2BElectrixRequestType.ReferenceData.SRNumber;
+    result.parentcasenumber = data.B2BElectrixRequestType.ReferenceData.RelatedSRNumber;
     result.accountname = data.B2BElectrixRequestType.ReferenceData.Account;
     result.srowner = data.B2BElectrixRequestType.ReferenceData.Owner;
     result.customerreferenceid = data.B2BElectrixRequestType.ReferenceData.CustomerRefNumber;
