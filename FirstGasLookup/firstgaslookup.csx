@@ -248,6 +248,10 @@ using Newtonsoft.Json;
   {
     'Code': 'GMS - NGCM',
     'Value': 100000020
+  },
+  {
+      'Code': 'Service Fitting',
+      'Value': '100000021'
   }
 ],
 'GasAssetType':
