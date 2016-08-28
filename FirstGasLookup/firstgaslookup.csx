@@ -19,6 +19,7 @@ using Newtonsoft.Json;
         public List<NameValuePair> ServiceRequestType { get; set; }
         public List<NameValuePair> LeakCheckMethod { get; set; }
         public List<NameValuePair> NetworkSupplyLossType { get; set; }
+        public List<NameValuePair> CurrentPressureKPA { get; set; }
 
 
 
@@ -46,6 +47,7 @@ using Newtonsoft.Json;
             var asfoundleakcheckmethod = lookupdata.LeakCheckMethod.FirstOrDefault(item => item.Code == (string)data.asfoundleakcheckmethod);
             var asleftleakcheckmethod = lookupdata.LeakCheckMethod.FirstOrDefault(item => item.Code == (string)data.asleftleakcheckmethod);
             var networksupplylosstype = lookupdata.NetworkSupplyLossType.FirstOrDefault(item => item.Code == (string)data.networksupplylosstype);
+            var currentpressurekpa = lookupdata.CurrentPressureKPA.FirstOrDefault(item => item.Code == (string)data.currentpressurekpa);
             
             data.activitypriority = (activitypriority == null)? null : activitypriority.Value;
             data.gasassetmaterial = (gasassetmaterial == null)? null : gasassetmaterial.Value;
@@ -61,6 +63,7 @@ using Newtonsoft.Json;
             data.asfoundleakcheckmethod = (asfoundleakcheckmethod == null)? null : asfoundleakcheckmethod.Value;
             data.asleftleakcheckmethod = (asleftleakcheckmethod == null)? null : asleftleakcheckmethod.Value;
             data.networksupplylosstype = (networksupplylosstype == null)? null : networksupplylosstype.Value;
+            data.currentpressurekpa = (currentpressurekpa == null)? null : currentpressurekpa.Value;
             
             return (object)data;
         }
@@ -84,6 +87,7 @@ using Newtonsoft.Json;
             var asfoundleakcheckmethod = lookupdata.LeakCheckMethod.FirstOrDefault(item => item.Value == (string)data.asfoundleakcheckmethod);
             var asleftleakcheckmethod = lookupdata.LeakCheckMethod.FirstOrDefault(item => item.Value == (string)data.asleftleakcheckmethod);
             var networksupplylosstype = lookupdata.NetworkSupplyLossType.FirstOrDefault(item => item.Value == (string)data.networksupplylosstype);
+            var currentpressurekpa = lookupdata.CurrentPressureKPA.FirstOrDefault(item => item.Value == (string)data.currentpressurekpa);
             
             data.activitypriority = (activitypriority == null)? null : activitypriority.Code;
             data.gasassetmaterial = (gasassetmaterial == null)? null : gasassetmaterial.Code;
@@ -99,6 +103,7 @@ using Newtonsoft.Json;
             data.asfoundleakcheckmethod = (asfoundleakcheckmethod == null)? null : asfoundleakcheckmethod.Code;
             data.asleftleakcheckmethod = (asleftleakcheckmethod == null)? null : asleftleakcheckmethod.Code;
             data.networksupplylosstype = (networksupplylosstype == null)? null : networksupplylosstype.Code;
+            data.currentpressurekpa = (currentpressurekpa == null)? null : currentpressurekpa.Code;
             
             return (object)data;
         }
@@ -699,6 +704,61 @@ using Newtonsoft.Json;
     'Code': 'Planned',
     'Value': 100000001
   },
+],
+'CurrentPressureKPA':
+[
+  {
+    'Code': 2.5,
+    'Value': 100000001
+  },
+  {
+    'Code': 2.75,
+    'Value': 100000002
+  },
+  {
+    'Code': 7,
+    'Value': 100000003
+  },
+  {
+    'Code': 14,
+    'Value': 100000004
+  },
+  {
+    'Code': 21,
+    'Value': 100000005
+  },
+  {
+    'Code': 35,
+    'Value': 100000006
+  },
+  {
+    'Code': 70,
+    'Value': 100000007
+  },
+  {
+    'Code': 100,
+    'Value': 100000008
+  },
+  {
+    'Code': 140,
+    'Value': 100000009
+  },
+  {
+    'Code': 200,
+    'Value': 100000010
+  },
+  {
+    'Code': 275,
+    'Value': 100000011
+  },
+  {
+    'Code': 340,
+    'Value': 100000012
+  },
+  {
+    'Code': 400,
+    'Value': 100000013
+  }
 ]
 }";
         #endregion
