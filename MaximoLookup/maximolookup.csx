@@ -30,64 +30,76 @@ using Newtonsoft.Json;
     'CRMStatusValue': 100000036
   },
   {
-    'ElectrixStatusCode': 'NONE',
+    'ElectrixStatusCode': '',
     'MaximoStatusCode': 'WAPPR',
     'CRMStatusCode': 'Waiting on Approval',
-    'CRMStatusValue': 1000000042
+    'CRMStatusValue': 100000042
   },
   {
-    'ElectrixStatusCode': 'NONE',
+    'ElectrixStatusCode': '',
     'MaximoStatusCode': 'NETWORKAPPR',
     'CRMStatusCode': 'Network Approved',
-    'CRMStatusValue': 1000000043
+    'CRMStatusValue': 100000043
   },
   {
-    'ElectrixStatusCode': 'NONE',
+    'ElectrixStatusCode': '',
     'MaximoStatusCode': 'SITECONTACT',
     'CRMStatusCode': 'Site Contacted',
-    'CRMStatusValue': 1000000044
+    'CRMStatusValue': 100000044
   },
   {
-    'ElectrixStatusCode': 'NONE',
+    'ElectrixStatusCode': '',
     'MaximoStatusCode': 'WMATL',
     'CRMStatusCode': 'Waiting on Material',
-    'CRMStatusValue': 1000000045
+    'CRMStatusValue': 100000045
   },
   {
-    'ElectrixStatusCode': 'NONE',
+    'ElectrixStatusCode': '',
     'MaximoStatusCode': 'WSCH',
     'CRMStatusCode': 'Waiting to be Scheduled',
-    'CRMStatusValue': 1000000046
+    'CRMStatusValue': 100000046
   },
   {
-    'ElectrixStatusCode': 'NONE',
+    'ElectrixStatusCode': '',
     'MaximoStatusCode': 'WKPKGISSUE',
     'CRMStatusCode': 'Work Package Ready to Issue',
-    'CRMStatusValue': 1000000047
+    'CRMStatusValue': 100000047
   },
   {
-    'ElectrixStatusCode': 'NONE',
+    'ElectrixStatusCode': '',
     'MaximoStatusCode': 'WKPKGSENT',
     'CRMStatusCode': 'Work Package Sent to Contractor',
-    'CRMStatusValue': 1000000048
+    'CRMStatusValue': 100000048
   },
   {
-    'ElectrixStatusCode': 'NONE',
+    'ElectrixStatusCode': '',
     'MaximoStatusCode': 'QUOTE2CRM',
     'CRMStatusCode': 'Quote Sent to CRM',
-    'CRMStatusValue': 1000000049
+    'CRMStatusValue': 100000049
   },
   {
-    'ElectrixStatusCode': 'NONE',
+    'ElectrixStatusCode': '',
     'MaximoStatusCode': 'DOCSORDERED',
     'CRMStatusCode': 'Maps and Plans Ordered',
-    'CRMStatusValue': 1000000050
+    'CRMStatusValue': 100000050
   },
   {
-    'ElectrixStatusCode': 'NONE',
+    'ElectrixStatusCode': '',
     'MaximoStatusCode': 'HISTEDIT',
     'CRMStatusCode': 'Edited in History',
-    'CRMStatusValue': 1000000051
+    'CRMStatusValue': 100000051
+  },
+  {
+    'ElectrixStatusCode': '',
+    'MaximoStatusCode': 'CONNCOMP',
+    'CRMStatusCode': 'Connection Complete',
+    'CRMStatusValue': 100000052
+  },
+  {
+    'ElectrixStatusCode': '',
+    'MaximoStatusCode': 'WORKCOMP',
+    'CRMStatusCode': 'Work Complete',
+    'CRMStatusValue': 100000053
   },
   {
     'ElectrixStatusCode': 'In Progress',
@@ -194,7 +206,7 @@ using Newtonsoft.Json;
   {
     'ElectrixStatusCode': 'NONE',
     'MaximoStatusCode': 'COMP',
-    'CRMStatusCode': 'Connection Complete',
+    'CRMStatusCode': 'Completed',
     'CRMStatusValue': 100000015
   },
   {
@@ -274,12 +286,6 @@ using Newtonsoft.Json;
     'MaximoStatusCode': 'NONE',
     'CRMStatusCode': 'Responded',
     'CRMStatusValue': 100000028
-  },
-  {
-    'ElectrixStatusCode': 'NONE',
-    'MaximoStatusCode': 'QUOTEEXPIRED',
-    'CRMStatusCode': 'Quote Expired',
-    'CRMStatusValue': 100000029
   },
   {
     'ElectrixStatusCode': 'Accepted',
