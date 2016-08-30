@@ -30,6 +30,66 @@ using Newtonsoft.Json;
     'CRMStatusValue': 100000036
   },
   {
+    'ElectrixStatusCode': 'NONE',
+    'MaximoStatusCode': 'WAPPR',
+    'CRMStatusCode': 'Waiting on Approval',
+    'CRMStatusValue': 1000000042
+  },
+  {
+    'ElectrixStatusCode': 'NONE',
+    'MaximoStatusCode': 'NETWORKAPPR',
+    'CRMStatusCode': 'Network Approved',
+    'CRMStatusValue': 1000000043
+  },
+  {
+    'ElectrixStatusCode': 'NONE',
+    'MaximoStatusCode': 'SITECONTACT',
+    'CRMStatusCode': 'Site Contacted',
+    'CRMStatusValue': 1000000044
+  },
+  {
+    'ElectrixStatusCode': 'NONE',
+    'MaximoStatusCode': 'WMATL',
+    'CRMStatusCode': 'Waiting on Material',
+    'CRMStatusValue': 1000000045
+  },
+  {
+    'ElectrixStatusCode': 'NONE',
+    'MaximoStatusCode': 'WSCH',
+    'CRMStatusCode': 'Waiting to be Scheduled',
+    'CRMStatusValue': 1000000046
+  },
+  {
+    'ElectrixStatusCode': 'NONE',
+    'MaximoStatusCode': 'WKPKGISSUE',
+    'CRMStatusCode': 'Work Package Ready to Issue',
+    'CRMStatusValue': 1000000047
+  },
+  {
+    'ElectrixStatusCode': 'NONE',
+    'MaximoStatusCode': 'WKPKGSENT',
+    'CRMStatusCode': 'Work Package Sent to Contractor',
+    'CRMStatusValue': 1000000048
+  },
+  {
+    'ElectrixStatusCode': 'NONE',
+    'MaximoStatusCode': 'QUOTE2CRM',
+    'CRMStatusCode': 'Quote Sent to CRM',
+    'CRMStatusValue': 1000000049
+  },
+  {
+    'ElectrixStatusCode': 'NONE',
+    'MaximoStatusCode': 'DOCSORDERED',
+    'CRMStatusCode': 'Maps and Plans Ordered',
+    'CRMStatusValue': 1000000050
+  },
+  {
+    'ElectrixStatusCode': 'NONE',
+    'MaximoStatusCode': 'HISTEDIT',
+    'CRMStatusCode': 'Edited in History',
+    'CRMStatusValue': 1000000051
+  },
+  {
     'ElectrixStatusCode': 'In Progress',
     'MaximoStatusCode': 'INPRG',
     'CRMStatusCode': 'In Progress',
@@ -79,7 +139,7 @@ using Newtonsoft.Json;
   },
   {
     'ElectrixStatusCode': 'NONE',
-    'MaximoStatusCode': 'QUOTEREJECTED',
+    'MaximoStatusCode': 'QUOTEREJECT',
     'CRMStatusCode': 'Quote Rejected',
     'CRMStatusValue': 100000006
   },
@@ -98,7 +158,7 @@ using Newtonsoft.Json;
   {
     'ElectrixStatusCode': 'NONE',
     'MaximoStatusCode': 'DOCSRCVD',
-    'CRMStatusCode': 'Documents Received',
+    'CRMStatusCode': 'Maps and Plans Received',
     'CRMStatusValue': 100000009
   },
   {
@@ -109,8 +169,8 @@ using Newtonsoft.Json;
   },
   {
     'ElectrixStatusCode': 'NONE',
-    'MaximoStatusCode': 'CREATEICP',
-    'CRMStatusCode': 'Create ICP',
+    'MaximoStatusCode': 'ICPCREATED',
+    'CRMStatusCode': 'ICP Created',
     'CRMStatusValue': 100000011
   },
   {
@@ -121,7 +181,7 @@ using Newtonsoft.Json;
   },
   {
     'ElectrixStatusCode': 'NONE',
-    'MaximoStatusCode': 'WORKPREP',
+    'MaximoStatusCode': 'WORKPREPD',
     'CRMStatusCode': 'Work Prepared',
     'CRMStatusValue': 100000013
   },
@@ -140,13 +200,13 @@ using Newtonsoft.Json;
   {
     'ElectrixStatusCode': 'NONE',
     'MaximoStatusCode': 'INSTALLMETER',
-    'CRMStatusCode': 'Install Meter',
+    'CRMStatusCode': 'Meter Installed',
     'CRMStatusValue': 100000016
   },
   {
     'ElectrixStatusCode': 'NONE',
     'MaximoStatusCode': 'UPDATEICP',
-    'CRMStatusCode': 'Update ICP',
+    'CRMStatusCode': 'ICP Updated',
     'CRMStatusValue': 100000017
   },
   {
@@ -158,7 +218,7 @@ using Newtonsoft.Json;
   {
     'ElectrixStatusCode': 'NONE',
     'MaximoStatusCode': 'GISCOMP',
-    'CRMStatusCode': 'GIS Updated',
+    'CRMStatusCode': 'GIS Updates Complete',
     'CRMStatusValue': 100000019
   },
   {
@@ -285,7 +345,7 @@ using Newtonsoft.Json;
     'ElectrixStatusCode': 'Duplicate',
     'MaximoStatusCode': 'NONE',
     'CRMStatusCode': 'Duplicate',
-    'CRMStatusValue': 100000041
+    'CRMStatusValue': 100000000
   },
   {
     'ElectrixStatusCode': 'Assigned',
