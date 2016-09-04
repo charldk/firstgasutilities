@@ -13,9 +13,9 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
 
     string jsonContent = await req.Content.ReadAsStringAsync();
     dynamic data = JsonConvert.DeserializeObject(jsonContent);
-    for (int x =0; x < data.Count; x++)
+    for (int x =0; x < data.appliances.Count; x++)
     {
-        result.Add(new Appliance(){applianceid = data[x].new_applianceid, estquantity = data[x].new_estquantity, name = data[x].new_name, icp = data[x].new_icp, comments= data[x].new_comments});
+        result.Add(new Appliance(){applianceid = data.appliances[x].new_applianceid, estquantity = data.appliances[x].new_estquantity, name = data.appliances[x].new_name, icp = data.appliances[x].new_icp, comments= data.appliances[x].new_comments});
     }
 
     return req.CreateResponse(HttpStatusCode.OK, (object)result);
