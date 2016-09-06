@@ -8,7 +8,7 @@ public class Appliance
 {
     public string applianceid { get; set; }
     public string name { get; set; }
-    public string estquantity { get; set; }
+    public int estquantity { get; set; }
     public string comments { get; set; }
     public string icp { get; set; }
 }
