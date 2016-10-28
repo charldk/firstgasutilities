@@ -11,5 +11,5 @@ public class Appliance
     public int estquantity { get; set; }
     public string comments { get; set; }
     public string icp { get; set; }
-    public string appliancetype {get; set; }
+    public string applianceitem {get; set; }
 }
